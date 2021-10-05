@@ -1,14 +1,12 @@
 import React from 'react';
 import styled from "styled-components";
-import logo from '../static/images/logo.svg';
-import pattern from '../static/images/bg-hero-desktop.svg';
-import mockups from '../static/images/illustration-mockups.svg';
+
 
 
 const StyledHeader = styled.header`
     padding: 30px 70px;
     background-color:hsl(193, 100%, 96%);
-    background-image: url(${pattern});
+    background-image: url('img/bg-hero-desktop.svg');
     
 
     nav {
@@ -71,7 +69,7 @@ export default function Header() {
     return (
         <StyledHeader>
             <nav>
-                <img src={logo} alt="" />
+                <img src="img/logo.svg" alt="" />
                 <button>Try if free</button>
             </nav>
             <section>
@@ -80,7 +78,7 @@ export default function Header() {
                     <p>Huddle re-imagines the wy we build communities. You have a voice, but so does your audience. Create connections with your users as you engage in genuine discussion.</p>
                     <button>Get Started For Free</button>
                 </div>
-                <img src={mockups} alt="" />
+                <img src="img/illustration-mockups.svg" alt="" />
             </section>
         </StyledHeader>
     )
