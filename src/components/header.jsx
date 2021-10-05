@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 
 const StyledHeader = styled.header`
-    padding: 30px 70px;
+    padding: 50px 70px;
     background-color:hsl(193, 100%, 96%);
     background-image: url('img/bg-hero-desktop.svg');
     
@@ -15,10 +15,14 @@ const StyledHeader = styled.header`
         align-items: center;
 
         button {
-            border: 1px solid light-gray;
+            box-shadow: 0 0 15px rgba(0,0,0,.2);
             background-color: white;
-            padding: 10px 40px;
+            padding: 15px 60px;
             border-radius: 30px;
+            border: none;
+            font-size: 14px;
+            font-weight: 700;
+            color: black;
         }
         img {
             width: 200px;
@@ -31,7 +35,7 @@ const StyledHeader = styled.header`
         margin: 50px 0;
 
         img {
-            width: 60%;
+            width: 55%;
         }
 
         div {
@@ -70,7 +74,7 @@ export default function Header() {
         <StyledHeader>
             <nav>
                 <img src="img/logo.svg" alt="" />
-                <button>Try if free</button>
+                <button>Try if Free</button>
             </nav>
             <section>
                 <div>

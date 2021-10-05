@@ -4,36 +4,39 @@ import styled from 'styled-components';
 
 const StyledItem = styled.li`
     display: flex;
-    list-style: none;
+    flex-direction: ${(props) => props.reverse === "true" ? "row-reverse" : "row" };
     align-items: center;
-    justify-content: space-around;
-    border: 3px solid rgba(0,0,0,.1);
+    justify-content: space-between;
+    box-shadow: 0 0 15px rgba(0,0,0,.05);
     border-radius : 15px;
     margin-bottom: 50px;
-    padding: 50px 0;
+    padding: 50px 20px 50px 120px;
+    
 
     div {
-        width: 400px;
-        margin: 0 200px 0 50px;
+        width: 500px;
+        line-height: 1.4rem;
     }
 
     img {
-        height: 300px;
+        height: 330px;
     }
 
     h2 {
-        font-size: 35px;
+        font-size: 30px;
+        margin-bottom: 20px;
     }
 
-
+    p{
+        color: rgba(0,0,0,.4);
+    }
 `
 
 
-
 export default function Item(props) {
-    const {title,desc,img} = props.data;
+    const {title,desc,img,reverse} = props.data;
     return (
-        <StyledItem>
+        <StyledItem reverse={reverse}>
             <div>
                 <h2>{title}</h2>
                 <p>{desc}</p>
@@ -42,3 +45,4 @@ export default function Item(props) {
         </StyledItem>
     )
 }
+
